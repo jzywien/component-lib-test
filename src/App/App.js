@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import SimpleExpansionPanel from '@jzywien/component-lib/SimpleExpansionPanel';
 import TextField from 'material-ui/TextField';
 import MenuItem from 'material-ui/Menu/MenuItem';
-import green from 'material-ui/colors/green';
-import Button from 'material-ui/Button';
-import Icon from 'material-ui/Icon';
 import Grid from 'material-ui/Grid';
+import SimpleExpansionPanel from '@jzywien/component-lib/SimpleExpansionPanel';
+import IconButton from '@jzywien/component-lib/IconButton';
 
 const styles = theme => ({
   panel: {
@@ -52,6 +50,12 @@ class App extends React.Component {
     }
   };
 
+  handleClick(prop) {
+    return (event) => {
+      alert('Button Clicked!');
+    }
+  };
+
   render() {
     const {classes} = this.props;
     return (
@@ -86,10 +90,7 @@ class App extends React.Component {
           <textarea style={{width: '100%', minHeight: '200px', fontSize: '12pt'}} />
           </Grid>
           <Grid item xs={12}>
-            <Button className={classes.button} variant="raised" color="primary">
-              <Icon className={classes.leftIcon}>add_circle</Icon>
-              SAVE NOTE
-            </Button>
+            <IconButton icon="add_circle" label="SAVE NOTE" onClick={this.handleClick()}/>
           </Grid>
         </SimpleExpansionPanel>
         </MuiThemeProvider>
