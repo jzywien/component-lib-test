@@ -1,0 +1,34 @@
+$md-expansion-panel-expanded-height: 42px !important;
+$md-expansion-panel-padding: 24px !default;
+
+$main-green: rgb(103,125,79);
+$light-green: rgb(212,222,204);
+$main-blue: rgb(45,85,137);
+$light-blue: rgb(195,207,226);
+
+@import '~react-md/src/scss/react-md';
+
+// Variable overrides
+$md-primary-color: rgb(45,85,137);
+$md-secondary-color: $md-purple-a-400;
+
+li {
+  list-style: none;
+}
+@include react-md-everything;
+
+.green-header {
+  background-color: $main-green !important;
+}
+
+.green-content {
+  background-color: $light-green !important;
+}
+
+.blue-header {
+  background-color: $main-blue !important;
+}
+
+.blue-content {
+  background-color: $light-blue !important;
+}

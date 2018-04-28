@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {SimpleExpansionPanel} from '@jzywien/component-lib';
 import {IconButton} from '@jzywien/component-lib';
 import TextField from 'react-md/lib/TextFields/TextField';
-import './App.css';
+import './App.scss';
 
 class App extends React.Component {
   constructor() {
