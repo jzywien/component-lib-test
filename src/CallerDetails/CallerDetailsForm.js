@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { IconButton } from '@jzywien/component-lib';
 import TextField from 'react-md/lib/TextFields/TextField';
-import { Grid, Cell, Button } from 'react-md';
+import { Button } from 'react-md';
 
 class CallerDetailsForm extends React.Component {
   constructor() {

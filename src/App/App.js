@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { SimpleExpansionPanel } from '@jzywien/component-lib';
 import { IconButton } from '@jzywien/component-lib';
 import TextField from 'react-md/lib/TextFields/TextField';
-import { Grid, Cell, Button } from 'react-md';
+import { Grid, Cell } from 'react-md';
 import greenTheme from '../themes/green';
 import blueTheme from '../themes/blue';
 import { ThemeProvider } from 'styled-components';
@@ -31,7 +31,6 @@ class App extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
     return (
       <Grid>
         <Cell size={8}>
@@ -44,7 +43,7 @@ class App extends React.Component {
             <SimpleExpansionPanel icon="healing" title="Service Request">
               <div style={{ marginBottom: "20px" }}>
                 The serach did not return any results.  Please expand your search criteria.
-          </div>
+              </div>
               <div >
                 <IconButton icon='add_circle' label='New Service Request' />
               </div>
@@ -53,18 +52,18 @@ class App extends React.Component {
         </Cell>
         <Cell size={4}>
           <div style={{ marginBottom: "15px" }}>
-          <ThemeProvider theme={greenTheme}>
-            <SimpleExpansionPanel icon="subject" title="Call Reasons" count="2">
-              <TextField label="Call Reason" placeholder="Choose Call Reason" />
-            </SimpleExpansionPanel>
-          </ThemeProvider>
+            <ThemeProvider theme={greenTheme}>
+              <SimpleExpansionPanel icon="subject" title="Call Reasons" count="2">
+                <TextField label="Call Reason" placeholder="Choose Call Reason" />
+              </SimpleExpansionPanel>
+            </ThemeProvider>
           </div>
           <div>
-          <ThemeProvider theme={blueTheme}>
-            <SimpleExpansionPanel icon="note_add" title="Call Notes" count="5">
-              <textarea style={{ width: '100%', minHeight: '250px' }}></textarea>
-              <IconButton icon='add_circle' label='Save Note' />
-            </SimpleExpansionPanel>
+            <ThemeProvider theme={blueTheme}>
+              <SimpleExpansionPanel icon="note_add" title="Call Notes" count="5">
+                <textarea style={{ width: '100%', minHeight: '250px' }}></textarea>
+                <IconButton icon='add_circle' label='Save Note' />
+              </SimpleExpansionPanel>
             </ThemeProvider>
           </div>
         </Cell>
